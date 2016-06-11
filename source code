@@ -1,0 +1,79 @@
+import java.awt.FlowLayout;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.Button;
+import java.awt.Font;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.InputMethodListener;
+import java.awt.event.WindowListener;
+
+import javax.swing.JFrame;
+public class NewInvoice extends JFrame implements ActionListener{
+static Label lbQua,lbPrice,lbDis,lbShow;
+static Button btAmount,btDis,btPaid;
+static TextField tfQua,tfPrice,tfDis;
+
+public static void main(String[] args){
+NewInvoice in=new NewInvoice();
+in.setSize(400, 200);
+in.setLocationRelativeTo(null);
+in.setLayout(new FlowLayout());
+in.setTitle("Invoice");
+in.add(lbQua=new Label("Quantity"));
+in.add(tfQua=new TextField());
+in.add(lbPrice=new Label("Price"));
+in.add(tfPrice=new TextField());
+in.add(lbDis=new Label("Discount"));
+in.add(tfDis=new TextField());
+in.add(lbShow=new Label());
+in.add(btAmount=new Button("Amount"));
+in.add(btDis=new Button("Discount"));
+in.add(btPaid=new Button("PaidPrice "));
+Dimension d=new Dimension(80,25);
+lbQua.setPreferredSize(d);
+lbPrice.setPreferredSize(d);
+lbDis.setPreferredSize(d);
+btAmount.setPreferredSize(d);
+btDis.setPreferredSize(d);
+btPaid.setPreferredSize(d);
+
+Dimension d1=new Dimension(150,25);
+tfQua.setPreferredSize(d1);
+tfPrice.setPreferredSize(d1);
+tfDis.setPreferredSize(d1);
+Dimension d2=new Dimension(150,35);
+lbShow.setPreferredSize(d2);
+btAmount.addActionListener(in);
+btDis.addActionListener(in);
+btPaid.addActionListener(in);
+in.setVisible(true);
+
+
+}
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
